@@ -55,7 +55,7 @@ Resource <- R6::R6Class(
         dir.create(folder)
 
       if (is.null(filename)) {
-        filename <- basename(file.path("wca_adm0.zip")) ## self$data$url
+        filename <- basename(file.path(self$data$url)) ## self$data$url
         if (!is.null(self$data$resource_type) && self$data$resource_type == "api")
           filename <- gsub("\\?.*", "", filename)
       }
